@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: rgba(#e6d3d3, 1);
   margin: 0 auto;
 
   // style all rows except the last one
@@ -14,9 +13,8 @@
   // * == any class that contains
   // $ == any class that ends with
   [class^="col-"] {
-    background-color: orangered;
     float: left;
-    color: $color-white;
+    color: $color-grey-dark;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
