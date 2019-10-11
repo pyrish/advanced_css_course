@@ -198,7 +198,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform .2s; }
-  .feature-box .feature-box__icon {
+  .feature-box__icon {
     margin-bottom: 1.5rem;
     display: inline-block;
     background-image: linear-gradient(to right, #7ed56f, #28b485);
@@ -262,4 +262,7 @@ body {
 .section-features {
   padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
-  background-size: cover; }
+  background-size: cover;
+  transform: skewY(-7deg); }
+  .section-features > * {
+    transform: skewY(7deg); }
