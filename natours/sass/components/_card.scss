@@ -46,7 +46,7 @@
   &__picture {
     background-size: cover;
     height: 23rem;
-    background-blend-mode: soft-light;
+    background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
@@ -74,8 +74,17 @@
     // ALWAYS provide position when applying absolute property
     top: 12rem;
     right: 2rem;
-
+    width: 75%;
   }
 
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 
+    &--1 {
+      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85),
+      rgba($color-secondary-dark, .85));
+    }
+  }
 }
