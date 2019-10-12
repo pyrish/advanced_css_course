@@ -1,5 +1,37 @@
 .card {
-  background-color: orangered;
-  height: 50rem;
-  
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 30rem;
+
+  &__side {
+    background-color: orangered;
+    color: #fff;
+    height: 30rem;
+    transition: all .8s;
+    // for both sides to stack on top of each other, always give the parent element the position relative
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // hides the back part of the card
+    backface-visibility: hidden;
+
+    &--front {
+      background-color: orangered;
+    }
+
+    &--back {
+      background-color: green;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
 }
