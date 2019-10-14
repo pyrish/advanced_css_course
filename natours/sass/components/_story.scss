@@ -3,7 +3,7 @@
   // block element inside a block element, hence:
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, .1);
-  background-color: $color-white;
+  background-color: rgba($color-white, .3);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -15,10 +15,11 @@
     height: 15rem;
     float: left;
     // radius at position, this property is to make the text flow around the image
+    -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-.5rem) skewX(12deg);
+    transform: translateX(-3rem) skewX(12deg);
     position: relative;
   }
 
