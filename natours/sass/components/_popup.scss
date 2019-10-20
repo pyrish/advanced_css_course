@@ -6,6 +6,32 @@
   left: 0;
   background-color: rgba($color-black, 0.8);
   z-index: 5000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
 
   &__content {
     @include absCenter;
@@ -37,6 +63,15 @@
     &__text {
       font-size: 1.4rem;
       margin-bottom: 4rem;
+
+      column-count: 2;
+      column-gap: 4rem;
+      column-rule: 1px solid $color-grey-light-2;
+
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
     }
 
 }
